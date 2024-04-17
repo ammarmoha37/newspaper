@@ -1,0 +1,111 @@
+.header {
+  margin: 0 auto;
+  padding: 2% 1%;
+  width: 75%;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.logo div {
+  font-size: 2rem;
+  font-family: "B612 Mono", monospace;
+  font-weight: 500;
+}
+
+.logo div:hover {
+  color: #649130;
+  cursor: pointer;
+}
+
+.social-search {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social svg:hover path {
+  fill: #808080;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  gap: 1rem;
+}
+
+#search {
+  width: 12.5rem;
+  padding: 5% 7%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 1px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+#search:focus {
+  outline: none;
+}
+
+.searchBtn {
+  padding: 1rem 1.5rem;
+  background-color: #000000;
+  border-radius: 2rem;
+  border: none;
+}
+
+.searchBtn:hover {
+  background-color: #649130;
+  cursor: pointer;
+}
+
+.site-nav{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.sticky-nav {
+  margin: 0 auto;
+  padding: 1.4% 1% ;
+  width: 75%;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0.05rem;
+  font-family: "B612 Mono", monospace;
+}
+
+.nav li {
+  margin-right: 4%;
+  cursor: pointer;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #dddddd;
+  position: sticky;
+  top: 3.6rem;
+}
