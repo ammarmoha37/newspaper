@@ -1,0 +1,287 @@
+.container {
+  margin: 0 auto;
+  padding: 4rem 13rem 0;
+}
+
+.radio {
+  display: none;
+}
+
+.slider-inner {
+  width: 500%;
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+.slider{
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.slide {
+  width: 20%;
+  height: 24rem;
+  float: left;
+  display: flex;
+}
+
+
+img {
+  width: 34.5rem;
+  height: 24rem;
+}
+
+.content-container {
+  background-color: #F8F9FA;
+  padding: 5rem;
+}
+
+
+.slide,
+.fake-radio,
+.radio-btn {
+  transition: all 0.5s ease-out;
+}
+
+.fake-radio {
+  float: right;
+}
+
+#slide1:checked ~ .slider .slider-inner {
+  margin-left: 0;
+}
+#slide2:checked ~ .slider .slider-inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ .slider .slider-inner {
+  margin-left: -200%;
+}
+
+#slide1:checked ~ div .fake-radio .radio-btn:nth-child(1),
+#slide2:checked ~ div .fake-radio .radio-btn:nth-child(2),
+#slide3:checked ~ div .fake-radio .radio-btn:nth-child(3) {
+  background: #649130;
+}
+
+.radio-btn {
+  width: 1.5rem;
+  height: 0.3rem;
+  background: #c5c5c5;
+  display: inline-block !important;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 93%;
+  top: -23rem;
+  position: relative;
+}
+
+#controls svg {
+  cursor: pointer;
+}
+
+#slide1:checked ~ .labels .label:nth-child(1),
+#slide2:checked ~ .labels .label:nth-child(2),
+#slide3:checked ~ .labels .label:nth-child(3) {
+  opacity: 1;
+}
+
+.label {
+  opacity: 0;
+  position: absolute;
+}
+
+.labels {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0 1rem;
+}
+
+.fake-radio {
+  margin: 1rem auto;
+}
+
+@keyframes bullet {
+  0%, 33.32333333333334%	{
+    background: #649130;
+  }
+  33.333333333333336%, 100% {
+    background: #c5c5c5;
+  }
+}
+
+#play1:checked ~ div .fake-radio .radio-btn:nth-child(1) {
+  animation: bullet 12300ms infinite -1000ms;
+}
+
+#play1:checked ~ div .fake-radio .radio-btn:nth-child(2) {
+  animation: bullet 12300ms infinite 3100ms;
+}
+
+#play1:checked ~ div .fake-radio .radio-btn:nth-child(3) {
+  animation: bullet 12300ms infinite 7200ms;
+}
+
+@keyframes slide {
+  0%, 25.203252032520325%	{ margin-left: 0; }
+  33.333333333333336%, 58.53658536585366%	{ margin-left: -100%; }
+  66.66666666666667%, 91.869918699187%	{ margin-left: -200%; }
+}
+
+.container > #play1:checked ~ .slider .slider-inner {
+  animation: slide 12300ms infinite;
+}
+
+@keyframes caption {
+  0%, 33.32333333333334%	{
+    opacity: 1;
+  }
+  33.333333333333336%, 100% {
+    opacity: 0;
+  }
+}
+
+#play1:checked ~ .labels .label:nth-child(1) {
+  animation: caption 12300ms infinite -1000ms;
+}
+
+#play1:checked ~ .labels .label:nth-child(2) {
+  animation: caption 12300ms infinite 3100ms;
+}
+
+#play1:checked ~ .labels .label:nth-child(3) {
+  animation: caption 12300ms infinite 7200ms;
+}
+
+
+
+
+/* html, body {
+  margin: 0px;
+  padding: 0px;
+  background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+}
+
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+} */
