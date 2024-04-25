@@ -131,3 +131,41 @@ p {
   font-size: 14px;
   cursor: pointer;
 }
+
+
+.special-post {
+  margin: 5rem 0;
+  width: 100%;
+  height: 24rem;
+  display: flex;
+}
+
+.special-post img {
+  width: 34.5rem;
+  height: 24rem;
+}
+
+.special-post .content-container {
+  background-color: #F8F9FA;
+  padding: 3rem;
+}
+
+.special-post .type {
+  color: #808080;
+  text-transform: uppercase;
+}
+
+.special-post h2 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.special-post p {
+  color: #808080;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: medium;
+  margin: 0.5rem 0;
+}
+
+
