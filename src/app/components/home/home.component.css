@@ -168,4 +168,26 @@ p {
   margin: 0.5rem 0;
 }
 
+.politics-business {
+  display: flex;
 
+}
+
+.politics-container,
+.business-container {
+  width: 50%;
+}
+
+.politics-business .posts{
+  width: 100%;
+}
+
+.politics-business img {
+  width: 30%;
+}
+
+.politics-business .post-credit {
+  padding-bottom: 0;
+  padding-right: 1rem;
+  margin: 0.5rem 0;
+}
