@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   width: 50%;
+  letter-spacing: -2px;
 }
 
 .logo div {
