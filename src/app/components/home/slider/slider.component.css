@@ -25,20 +25,25 @@
 
 .slide {
   width: 20%;
-  height: 24rem;
+  max-height: 24rem;
   float: left;
   display: flex;
 }
 
+.img-container {
+  width: 50%;
+}
 
 img {
-  width: 34.5rem;
-  height: 24rem;
+  width: 100%;
+  height: 100%;
 }
 
 .content-container {
+  width: 50%;
   background-color: #F8F9FA;
   padding: 3rem;
+  overflow: visible;
 }
 
 .type {

@@ -1,0 +1,53 @@
+.trending {
+  margin-left: 1rem;
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
+.single-post {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.trend-rate {
+  font-size: 30px;
+  color: #cccccc;
+  font-weight: 400;
+  height: 50%;
+  padding: 0 0.5rem;
+}
+
+.single-post {
+  margin-bottom: 2rem;
+}
+
+.post-credit {
+  color: #B4B4B4;
+  font-size: 12.5px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-weight: 400;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #000;
+}
+
+.see-all a {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: #8bc34a;
+  font-size: 14px;
+  cursor: pointer;
+}
