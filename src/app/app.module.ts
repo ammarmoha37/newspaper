@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesPostsComponent } from './components/categories-posts/categories-posts.component';
 import { TrendingComponent } from './components/trending/trending.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     FooterComponent,
     CategoriesPostsComponent,
     TrendingComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
