@@ -4,10 +4,6 @@
 }
 
 .category-trending {
-  /* display: grid;
-  grid-template-areas:
-    "title1   title1 trend"
-    "selected posts  trend"; */
   display: flex;
 }
 
@@ -186,7 +182,7 @@ app-categories-posts {
   width: 170%;
 }
 
-app-trending:last-child {
+app-trending {
   width: 60%;
 }
 

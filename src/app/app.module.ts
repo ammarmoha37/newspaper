@@ -10,6 +10,7 @@ import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesPostsComponent } from './components/categories-posts/categories-posts.component';
 import { TrendingComponent } from './components/trending/trending.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TrendingComponent } from './components/trending/trending.component';
     SubscribeComponent,
     FooterComponent,
     CategoriesPostsComponent,
-    TrendingComponent
+    TrendingComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

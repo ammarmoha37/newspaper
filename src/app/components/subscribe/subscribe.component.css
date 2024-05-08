@@ -21,10 +21,12 @@
 
 .subscribe h3 {
   font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 .subscribe p {
   width: 90%;
+  color: #808080;
 }
 
 .subscribe-form {
