@@ -14,28 +14,9 @@ export class SliderComponent implements OnInit{
   @ViewChild('sliderInner') sliderInner: ElementRef;
 
   @Input() articles: any[] = [];
-  // @Input() topArticles: any[];
 
   ngOnInit(): void {
-    // console.log(this.topArticles);
   }
-
-
-  // newsData: any;
-
-  // constructor(private articleService: ArticleService) {
-  // }
-
-  // ngOnInit(): void {
-  //   this.getNews();
-  // }
-
-  // getNews(): void {
-  //   this.articleService.getTopHeadlines().subscribe(data => {
-  //     this.newsData = data;
-  //     console.log(data);
-  //   });
-  // }
 
 
   goToPrev(): void {
