@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Article } from 'src/app/models/articles.model';
 import { ArticleService } from 'src/app/services/article.service';
 
 
@@ -13,7 +14,7 @@ export class SliderComponent implements OnInit{
 
   @ViewChild('sliderInner') sliderInner: ElementRef;
 
-  @Input() articles: any[] = [];
+  @Input() articles: Article[] = [];
 
   ngOnInit(): void {
   }

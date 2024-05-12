@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,9 @@ import { CategoriesPostsComponent } from '@components/categories-posts/categorie
 import { TrendingComponent } from '@components/trending/trending.component';
 import { CategoriesComponent } from '@components/categories/categories.component';
 import { ContactComponent } from '@components/contact/contact.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SportListComponent } from '@components/home/sport-list/sport-list.component';
+import { SelectedArticleComponent } from '@components/home/sport-list/selected-article/selected-article.component';
+import { ArticleItemComponent } from './components/home/sport-list/article-item/article-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CategoriesPostsComponent,
     TrendingComponent,
     CategoriesComponent,
-    ContactComponent
+    ContactComponent,
+    SportListComponent,
+    SelectedArticleComponent,
+    ArticleItemComponent,
   ],
   imports: [
     BrowserModule,

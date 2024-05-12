@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from 'src/app/models/articles.model';
 import { ArticleService } from 'src/app/services/article.service';
 
 @Component({
@@ -8,12 +9,13 @@ import { ArticleService } from 'src/app/services/article.service';
 })
 export class HomeComponent implements OnInit{
 
-  topArticles: any[] = [];
+  topArticles: Article[] = [];
 
   constructor(private articleService: ArticleService) {}
 
   ngOnInit(): void {
     this.articleService.getTopHeadlines().subscribe((data: any) => {
+      console.log(data);
       this.topArticles = data.articles;
     });
   }

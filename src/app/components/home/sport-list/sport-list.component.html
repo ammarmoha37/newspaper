@@ -1,0 +1,12 @@
+<div class="container">
+  <app-selected-article [selectedArticle]="selectedArticle"
+      ></app-selected-article>
+  <div class="posts">
+    <app-article-item
+    *ngFor="let articleEl of sportArticles.slice(0, 3)"
+    [article]="articleEl"
+    [selectedArticle]="selectedArticle"
+    (articleSelected)="onArticleSelected($event)"
+    ></app-article-item>
+  </div>
+</div>
