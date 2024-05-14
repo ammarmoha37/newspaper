@@ -23,4 +23,9 @@ export class ArticleService {
     return this.http.get<any[]>(url);
   }
 
+  getTrending(type: string): Observable<any>{
+    const url = `${this.apiUrl}/everything?q="trending"&sortBy=${type}&apiKey=${this.apiKey}`;
+    return this.http.get<any[]>(url);
+  }
+
 }
