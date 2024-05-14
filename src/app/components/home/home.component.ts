@@ -10,6 +10,8 @@ import { ArticleService } from 'src/app/services/article.service';
 export class HomeComponent implements OnInit{
 
   topArticles: Article[] = [];
+  politicsArticles: Article[] = [];
+  businessArticles: Article[] = [];
 
   constructor(private articleService: ArticleService) {}
 
@@ -17,6 +19,16 @@ export class HomeComponent implements OnInit{
     this.articleService.getTopHeadlines().subscribe((data: any) => {
       console.log(data);
       this.topArticles = data.articles;
+    });
+
+    this.articleService.getCategories('politics').subscribe((data: any) => {
+      this.politicsArticles = data.articles;
+      console.log('Politics:', this.politicsArticles);
+    });
+
+    this.articleService.getCategories('business').subscribe((data: any) => {
+      this.businessArticles = data.articles;
+      console.log('Business:', this.businessArticles);
     });
   }
 }

@@ -13,7 +13,7 @@
       <img [src]="topArticles[4]?.urlToImage || '../../../../assets/imgs/article.jpg'" alt="test image">
     </div>
     <div class="content-container">
-      <span class="type">{{ topArticles[4]?.type }}</span>
+      <span class="type">Top Articles</span>
       <h2><a>{{ topArticles[4]?.title }}</a></h2>
       <p>{{ topArticles[4]?.description }}</p>
       <div class="post-credit">
@@ -31,84 +31,33 @@
     <div class="politics-container">
       <h2 class="section-title">Politics</h2>
       <div class="posts">
-        <div class="single-post">
-          <img src="../../../assets/imgs/article.jpg" alt="">
+        <div class="single-post" *ngFor="let article of politicsArticles.slice(0, 3)">
+          <img [src]="article?.urlToImage || '../../../../assets/imgs/article.jpg'" alt="">
           <div class="post-credit">
-            <h3>News Needs to Meet Its Audiences Where They Are</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-            <span><a>Dave Roger</a> in <a>Food</a></span>
-            <span>Jun 13 • 3 min read
+            <h3>{{ article?.title }}</h3>
+            <p>{{ article?.description }}</p>
+            <span><a>{{ article?.author|| 'Unknown Author' }}</a> in <a>{{ article.source.name }}</a></span>
+            <span>{{ article?.publishedAt | date: 'MMM d' }} • 3 min read
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
                 <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
               </svg>
             </span>
           </div>
         </div>
-        <div class="single-post">
-          <img src="../../../assets/imgs/article.jpg" alt="">
-          <div class="post-credit">
-            <h3>News Needs to Meet Its Audiences Where They Are</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-            <span><a>Dave Roger</a> in <a>Food</a></span>
-            <span>Jun 13 • 3 min read
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
-                <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div class="single-post">
-          <img src="../../../assets/imgs/article.jpg" alt="">
-          <div class="post-credit">
-            <h3>News Needs to Meet Its Audiences Where They Are</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-            <span><a>Dave Roger</a> in <a>Food</a></span>
-            <span>Jun 13 • 3 min read
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
-                <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
-              </svg>
-            </span>
-          </div>
-        </div>
+
       </div>
     </div>
 
     <div class="business-container">
       <h2 class="section-title">Business</h2>
       <div class="posts">
-        <div class="single-post">
-          <img src="../../../assets/imgs/article.jpg" alt="">
+        <div class="single-post" *ngFor="let article of businessArticles.slice(0, 3)">
+          <img [src]="article?.urlToImage || '../../../../assets/imgs/article.jpg'" alt="">
           <div class="post-credit">
-            <h3>News Needs to Meet Its Audiences Where They Are</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-            <span><a>Dave Roger</a> in <a>Food</a></span>
-            <span>Jun 13 • 3 min read
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
-                <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div class="single-post">
-          <img src="../../../assets/imgs/article.jpg" alt="">
-          <div class="post-credit">
-            <h3>News Needs to Meet Its Audiences Where They Are</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-            <span><a>Dave Roger</a> in <a>Food</a></span>
-            <span>Jun 13 • 3 min read
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
-                <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div class="single-post">
-          <img src="../../../assets/imgs/article.jpg" alt="">
-          <div class="post-credit">
-            <h3>News Needs to Meet Its Audiences Where They Are</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-            <span><a>Dave Roger</a> in <a>Food</a></span>
-            <span>Jun 13 • 3 min read
+            <h3>{{ article?.title }}</h3>
+            <p>{{ article?.description }}</p>
+            <span><a>{{ article?.author|| 'Unknown Author' }}</a> in <a>{{ article.source.name }}</a></span>
+            <span>{{ article?.publishedAt | date: 'MMM d' }} • 3 min read
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
                 <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
               </svg>
