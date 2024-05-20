@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'categories/politics' ,component: CategoriesComponent},
   {path: 'categories/business' ,component: CategoriesComponent},
   {path: 'categories/health' ,component: CategoriesComponent},
-  {path: 'categories/design' ,component: CategoriesComponent},
+  {path: 'categories/science' ,component: CategoriesComponent},
   {path: 'categories/sport' ,component: CategoriesComponent},
   {path: 'contact' ,component: ContactComponent}
 ];

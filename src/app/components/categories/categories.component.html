@@ -1,6 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
-  <div class="posts-container">
+  <div class="posts-container" *ngIf="isRouteActive('/categories')">
     <h2 class="section-title">Sports</h2>
     <div class="posts">
       <div class="single-post" *ngFor="let sportArticle of sportArticles?.slice(0, 3)">
@@ -8,7 +8,7 @@
           <h2>{{ sportArticle?.title }}</h2>
           <p>{{ sportArticle?.description }}</p>
           <span><a>{{ sportArticle?.author|| 'Unknown Author' }}</a> in <a>{{ sportArticle.source.name }}</a></span>
-          <span>Jun 13 • 3 min read
+          <span>{{ sportArticle?.publishedAt | date: 'MMM d' }} • 3 min read
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
               <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
             </svg>
@@ -27,7 +27,7 @@
           <h2>{{ politicArticle?.title }}</h2>
           <p>{{ politicArticle?.description }}</p>
           <span><a>{{ politicArticle?.author|| 'Unknown Author' }}</a> in <a>{{ politicArticle.source.name }}</a></span>
-          <span>Jun 13 • 3 min read
+          <span>{{ politicArticle?.publishedAt | date: 'MMM d' }} • 3 min read
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
               <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
             </svg>
@@ -46,7 +46,7 @@
           <h2>{{ scienceArticle?.title }}</h2>
           <p>{{ scienceArticle?.description }}</p>
           <span><a>{{ scienceArticle?.author|| 'Unknown Author' }}</a> in <a>{{ scienceArticle.source.name }}</a></span>
-          <span>Jun 13 • 3 min read
+          <span>{{ scienceArticle?.publishedAt | date: 'MMM d' }} • 3 min read
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
               <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
             </svg>
@@ -57,8 +57,27 @@
         </div>
       </div>
     </div>
+  </div>
 
-
+  <div class="posts-container" *ngIf="category">
+    <h2 class="section-title">{{ category | titlecase }} Articles</h2>
+    <div class="posts">
+      <div class="single-post" *ngFor="let article of articles?.slice(0, 10)">
+        <div class="post-credit">
+          <h2>{{ article?.title }}</h2>
+          <p>{{ article?.description }}</p>
+          <span><a>{{ article?.author|| 'Unknown Author' }}</a> in <a>{{ article.source.name }}</a></span>
+          <span>{{ article?.publishedAt | date: 'MMM d' }} • 3 min read
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+              <path fill="#959595" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
+            </svg>
+          </span>
+        </div>
+        <div class="img-container">
+          <img [src]="article?.urlToImage || '../../../../assets/imgs/article.jpg'" alt="">
+        </div>
+      </div>
+    </div>
   </div>
   <app-trending [sectionTitle]="'Trending'"></app-trending>
 </div>
