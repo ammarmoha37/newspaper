@@ -15,7 +15,6 @@ export class CategoriesPostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.articleService.getTopHeadlines().subscribe((data: any) => {
-      console.log(data);
       this.recentArticles = data.articles;
     });
   }

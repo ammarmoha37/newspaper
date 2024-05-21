@@ -24,8 +24,6 @@ export class CategoriesComponent implements OnInit {
 
     this.articleService.getCategories('sport').subscribe((data: any) => {
       this.sportArticles = data.articles;
-      console.log(data);
-
     });
 
     this.articleService.getCategories('politics').subscribe((data: any) => {

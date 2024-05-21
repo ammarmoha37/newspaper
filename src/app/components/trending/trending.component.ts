@@ -18,14 +18,12 @@ export class TrendingComponent implements OnInit {
     if (this.sectionTitle === 'Trending') {
       this.articleService.getTrending('trending').subscribe((data: any) => {
         this.articles = data.articles;
-        console.log('Trending Articles:', this.articles);
       });
     }
 
     if (this.sectionTitle === 'Popular Posts'){
       this.articleService.getTrending('popularity').subscribe((data: any) => {
         this.articles = data.articles;
-        console.log('Popular Articles:', this.articles);
       });
     }
   }

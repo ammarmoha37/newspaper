@@ -17,18 +17,15 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.articleService.getTopHeadlines().subscribe((data: any) => {
-      console.log(data);
       this.topArticles = data.articles;
     });
 
     this.articleService.getCategories('politics').subscribe((data: any) => {
       this.politicsArticles = data.articles;
-      console.log('Politics:', this.politicsArticles);
     });
 
     this.articleService.getCategories('business').subscribe((data: any) => {
       this.businessArticles = data.articles;
-      console.log('Business:', this.businessArticles);
     });
   }
 }

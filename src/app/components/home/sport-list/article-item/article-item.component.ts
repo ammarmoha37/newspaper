@@ -12,7 +12,6 @@ export class ArticleItemComponent {
   @Output() articleSelected = new EventEmitter<Article>();
 
   onSelected() {
-      console.log('Article Selected from article-item:', this.article);
       this.articleSelected.emit(this.article);
   }
 
