@@ -1,17 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .trending {
-  margin-left: 1rem;
+  padding: 3rem 0 1rem;
+  width: 73%;
+}
+
+.posts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .section-title {
   font-weight: 400;
   font-size: 20px;
   text-decoration: underline;
-  margin-bottom: 2rem;
+  margin: 1rem 3rem;
 }
 
 .single-post {
   display: flex;
   gap: 0.5rem;
+  width: 48%;
 }
 
 .trend-rate {
@@ -45,10 +60,3 @@ a {
   text-decoration: none;
 }
 
-.see-all a {
-  margin-top: 1rem;
-  text-transform: uppercase;
-  color: #8bc34a;
-  font-size: 14px;
-  cursor: pointer;
-}

@@ -16,6 +16,7 @@ import { ContactComponent } from '@components/contact/contact.component';
 import { SportListComponent } from '@components/home/sport-list/sport-list.component';
 import { SelectedArticleComponent } from '@components/home/sport-list/selected-article/selected-article.component';
 import { ArticleItemComponent } from './components/home/sport-list/article-item/article-item.component';
+import { SeeAllComponent } from './components/see-all/see-all.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ArticleItemComponent } from './components/home/sport-list/article-item/
     SportListComponent,
     SelectedArticleComponent,
     ArticleItemComponent,
+    SeeAllComponent,
   ],
   imports: [
     BrowserModule,
