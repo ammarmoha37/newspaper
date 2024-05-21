@@ -28,4 +28,7 @@ export class ArticleService {
     return this.http.get<any[]>(url);
   }
 
+  searchArticles(query: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/everything?q=${query}&apiKey=${this.apiKey}`);
+  }
 }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CategoriesComponent } from '@components/categories/categories.component';
 import { ContactComponent } from '@components/contact/contact.component';
 import { HomeComponent } from '@components/home/home.component';
+import { SearchComponent } from '@components/search/search.component';
 import { SeeAllComponent } from '@components/see-all/see-all.component';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'categories/science' ,component: CategoriesComponent},
   {path: 'categories/sport' ,component: CategoriesComponent},
   {path: 'contact' ,component: ContactComponent},
-  {path: 'see-all' ,component: SeeAllComponent}
+  {path: 'see-all' ,component: SeeAllComponent},
+  {path: 'search', component: SearchComponent}
 ];
 
 @NgModule({

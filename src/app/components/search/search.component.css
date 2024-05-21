@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.trending {
+  padding: 3rem 0 1rem;
+  width: 78%;
+}
+
+.posts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: underline;
+  margin: 1rem 2rem;
+}
+
+.description {
+  margin: 1rem 0;
+}
+
+.single-post {
+  display: flex;
+  gap: 0.5rem;
+  width: 48%;
+}
+
+.trend-rate {
+  font-size: 30px;
+  color: #cccccc;
+  font-weight: 400;
+  height: 50%;
+  padding: 0 0.5rem;
+}
+
+.single-post {
+  margin-bottom: 2rem;
+}
+
+.post-credit {
+  color: #B4B4B4;
+  font-size: 12.5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+h3 {
+  font-weight: 400;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  width: 12rem;
+  height: 100%;
+}
