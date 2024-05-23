@@ -11,6 +11,7 @@ export class TrendingComponent implements OnInit {
 
   articles: Article[];
   @Input() sectionTitle: string;
+  seeAllEl: string;
 
   constructor(private articleService: ArticleService) { }
 
@@ -19,12 +20,14 @@ export class TrendingComponent implements OnInit {
       this.articleService.getTrending('trending').subscribe((data: any) => {
         this.articles = data.articles;
       });
+      this.seeAllEl = 'Trends';
     }
 
     if (this.sectionTitle === 'Popular Posts'){
       this.articleService.getTrending('popularity').subscribe((data: any) => {
         this.articles = data.articles;
       });
+      this.seeAllEl = 'Popular';
     }
   }
 
