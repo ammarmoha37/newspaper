@@ -24,19 +24,6 @@ app-sport-list {
   margin-bottom: 2rem;
 }
 
-.selected {
-  grid-area: selected;
-  width: 100%;
-}
-.selected img {
-  width: 100%;
-}
-
-.selected h3 {
-  margin-top: 1.5rem;
-  font-weight: 500;
-}
-
 p {
   color: #808080;
   font-size: 14px;
@@ -191,3 +178,135 @@ app-trending {
   margin: 0;
 }
 
+h2 a,
+h3 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 82%;
+  }
+
+  .category-trending {
+    flex-direction: column;
+  }
+
+  .category {
+    width: 100%;
+  }
+
+  app-sport-list {
+    width: 82%;
+  }
+
+  app-trending {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .special-post {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .special-post .img-container {
+    width: 100%;
+  }
+
+  .special-post img {
+    height: 300px;
+  }
+
+  .special-post .content-container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .special-post h2 {
+    font-size: 1.25rem;
+  }
+
+  .special-post p {
+    font-size: 0.875rem;
+  }
+
+  .post-credit {
+    font-size: 0.75rem;
+  }
+
+  .politics-business {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  .politics-business .section-title {
+    margin-bottom: 0;
+  }
+
+  .politics-business .posts {
+    margin-top: 2rem;
+  }
+
+  .politics-container,
+  .business-container {
+    width: 100%;
+  }
+
+  .politics-container {
+    margin-bottom: 2rem;
+  }
+
+  .politics-business img {
+    width: 50%;
+  }
+
+  .politics-business .post-credit {
+    width: 50%;
+  }
+
+  .recent-popular {
+    flex-direction: column;
+    margin: 2rem 0;
+
+  }
+
+  app-categories-posts {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-post {
+    margin: 4rem 0 2rem;
+  }
+
+  .politics-business {
+    margin: 0;
+  }
+
+  .politics-business .section-title {
+    margin: 0;
+  }
+
+  .politics-business .posts {
+    margin-top: 1rem;
+  }
+
+  .politics-business .single-post {
+    flex-direction: column;
+  }
+
+  .politics-business img {
+    width: 100%;
+  }
+
+  .politics-business .post-credit {
+    width: 100%;
+    padding: 0;
+  }
+
+  .recent-popular {
+    margin: 0;
+  }
+}

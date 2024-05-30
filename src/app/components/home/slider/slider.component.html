@@ -13,7 +13,7 @@
           </div>
           <div class="content-container">
             <span class="type">Top Articles</span>
-            <h2><a>{{ article?.title }}</a></h2>
+            <h2><a [href]="article?.url" target="_blank">{{ article?.title }}</a></h2>
             <p>{{ article?.description }}</p>
             <div class="post-credit">
               <span><a>{{ article?.author || 'Unknown Author' }}</a> in <a>{{ article?.source.name }}</a></span>

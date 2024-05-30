@@ -43,6 +43,11 @@
 
 .single-post {
   margin-bottom: 2rem;
+  width: 45%;
+}
+
+.post-content {
+  display: flex;
 }
 
 .post-credit {
@@ -65,7 +70,48 @@ a {
   text-decoration: none;
 }
 
+.img-container {
+  width: 50%;
+}
+
 img {
-  width: 12rem;
+  width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .single-post {
+    width: 100%;
+  }
+
+  .single-post h3 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-post {
+    flex-direction: column;
+  }
+
+  .post-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .trend-rate {
+    padding: 0;
+  }
 }

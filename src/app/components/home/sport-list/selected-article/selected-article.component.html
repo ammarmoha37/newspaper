@@ -2,7 +2,7 @@
   <h2 class="section-title">Sports</h2>
   <div class="selected">
     <img [src]="selectedArticle?.urlToImage || '../../../../assets/imgs/article.jpg'" alt="">
-    <h3>{{ selectedArticle?.title }}</h3>
+    <h3><a [href]="selectedArticle?.url" target="_blank">{{ selectedArticle?.title }}</a></h3>
     <p>{{ selectedArticle?.description }}</p>
     <div class="post-credit">
       <span><a>{{ selectedArticle?.author }}</a> in <a>{{ selectedArticle?.source.name }}</a></span>

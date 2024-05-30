@@ -14,7 +14,7 @@
     </div>
     <div class="content-container">
       <span class="type">Top Articles</span>
-      <h2><a>{{ topArticles[4]?.title }}</a></h2>
+      <h2><a [href]="topArticles[4]?.url" target="_blank">{{ topArticles[4]?.title }}</a></h2>
       <p>{{ topArticles[4]?.description }}</p>
       <div class="post-credit">
         <span><a>{{ topArticles[4]?.author || 'Unknown Author' }}</a> in <a>{{ topArticles[4]?.source.name }}</a></span>
@@ -34,7 +34,7 @@
         <div class="single-post" *ngFor="let article of politicsArticles.slice(0, 3)">
           <img [src]="article?.urlToImage || '../../../../assets/imgs/article.jpg'" alt="">
           <div class="post-credit">
-            <h3>{{ article?.title }}</h3>
+            <h3><a [href]="article?.url" target="_blank">{{ article?.title }}</a></h3>
             <p>{{ article?.description }}</p>
             <span><a>{{ article?.author|| 'Unknown Author' }}</a> in <a>{{ article.source.name }}</a></span>
             <span>{{ article?.publishedAt | date: 'MMM d' }} • 3 min read
@@ -54,7 +54,7 @@
         <div class="single-post" *ngFor="let article of businessArticles.slice(0, 3)">
           <img [src]="article?.urlToImage || '../../../../assets/imgs/article.jpg'" alt="">
           <div class="post-credit">
-            <h3>{{ article?.title }}</h3>
+            <h3><a [href]="article?.url" target="_blank">{{ article?.title }}</a></h3>
             <p>{{ article?.description }}</p>
             <span><a>{{ article?.author|| 'Unknown Author' }}</a> in <a>{{ article.source.name }}</a></span>
             <span>{{ article?.publishedAt | date: 'MMM d' }} • 3 min read

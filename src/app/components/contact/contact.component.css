@@ -81,3 +81,9 @@ h2 {
   background-color: #649130;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}

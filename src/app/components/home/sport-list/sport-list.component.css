@@ -14,3 +14,19 @@ app-selected-article {
   width: 100%;
   margin-top: 3.65rem;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    width: 125%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .posts {
+    margin-top: 1rem;
+  }
+}

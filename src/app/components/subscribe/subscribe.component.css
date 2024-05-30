@@ -1,5 +1,4 @@
 .newsletter-sub {
-
   background-color: #F8F9FA;
   padding: 5rem 0;
   width: 100%;
@@ -31,6 +30,7 @@
 
 .subscribe-form {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   height: 3.1rem;
   width: 50%;
@@ -59,4 +59,28 @@
 .sendBtn:hover {
   background-color: #649130;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .newsletter-sub {
+    padding: 1rem 0;
+  }
+
+  .newsletter-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .subscribe {
+    width: 70%;
+    padding-right: 0;
+  }
+
+  .subscribe p {
+    width: 100%;
+  }
+
+  .subscribe-form {
+    width: 60%;
+  }
 }

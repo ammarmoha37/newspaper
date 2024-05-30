@@ -5,7 +5,7 @@
     <div class="posts">
       <div class="single-post" *ngFor="let sportArticle of sportArticles?.slice(0, 3)">
         <div class="post-credit">
-          <h2>{{ sportArticle?.title }}</h2>
+          <h2><a [href]="sportArticle?.url" target="_blank">{{ sportArticle?.title }}</a></h2>
           <p>{{ sportArticle?.description }}</p>
           <span><a>{{ sportArticle?.author|| 'Unknown Author' }}</a> in <a>{{ sportArticle.source.name }}</a></span>
           <span>{{ sportArticle?.publishedAt | date: 'MMM d' }} • 3 min read
@@ -24,7 +24,7 @@
     <div class="posts">
       <div class="single-post" *ngFor="let politicArticle of politicsArticles?.slice(0, 3)">
         <div class="post-credit">
-          <h2>{{ politicArticle?.title }}</h2>
+          <h2><a [href]="politicArticle?.url" target="_blank">{{ politicArticle?.title }}</a></h2>
           <p>{{ politicArticle?.description }}</p>
           <span><a>{{ politicArticle?.author|| 'Unknown Author' }}</a> in <a>{{ politicArticle.source.name }}</a></span>
           <span>{{ politicArticle?.publishedAt | date: 'MMM d' }} • 3 min read
@@ -43,7 +43,7 @@
     <div class="posts">
       <div class="single-post" *ngFor="let scienceArticle of scienceArticles?.slice(0, 3)">
         <div class="post-credit">
-          <h2>{{ scienceArticle?.title }}</h2>
+          <h2><a [href]="scienceArticle?.url" target="_blank">{{ scienceArticle?.title }}</a></h2>
           <p>{{ scienceArticle?.description }}</p>
           <span><a>{{ scienceArticle?.author|| 'Unknown Author' }}</a> in <a>{{ scienceArticle.source.name }}</a></span>
           <span>{{ scienceArticle?.publishedAt | date: 'MMM d' }} • 3 min read
@@ -60,11 +60,11 @@
   </div>
 
   <div class="posts-container" *ngIf="category">
-    <h2 class="section-title">{{ category | titlecase }} Articles</h2>
+    <h2 class="section-title">{{ category }} Articles</h2>
     <div class="posts">
       <div class="single-post" *ngFor="let article of articles?.slice(0, 10)">
         <div class="post-credit">
-          <h2>{{ article?.title }}</h2>
+          <h2><a [href]="article?.url" target="_blank">{{ article?.title }}</a></h2>
           <p>{{ article?.description }}</p>
           <span><a>{{ article?.author|| 'Unknown Author' }}</a> in <a>{{ article.source.name }}</a></span>
           <span>{{ article?.publishedAt | date: 'MMM d' }} • 3 min read

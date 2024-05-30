@@ -37,6 +37,7 @@ p {
 h2, a {
   color: #000000;
   font-weight: 400;
+  text-decoration: none;
 }
 
 span {
@@ -52,5 +53,38 @@ img {
 
 app-trending {
   width: 60%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 82%;
+    flex-direction: column;
+  }
+
+  .posts-container {
+    width: 100%;
+  }
+
+  .single-post {
+    flex-direction: row-reverse;
+  }
+
+  .post-credit {
+    padding: 0 2rem;
+  }
+
+  app-trending {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-post {
+    flex-direction: column-reverse;
+  }
+
+  .post-credit {
+    padding: 1rem 0;
+  }
 }
 

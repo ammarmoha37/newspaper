@@ -12,6 +12,7 @@
 .single-post {
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .trend-rate {
@@ -20,10 +21,6 @@
   font-weight: 400;
   height: 50%;
   padding: 0 0.5rem;
-}
-
-.single-post {
-  margin-bottom: 2rem;
 }
 
 .post-credit {
@@ -51,4 +48,14 @@ a {
   color: #8bc34a;
   font-size: 14px;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .trending {
+    margin-left: 0;
+  }
+
+  .single-post {
+    width: 100%;
+  }
 }

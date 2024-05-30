@@ -60,3 +60,21 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 1024px) {
+  .trending {
+    width: 82%;
+  }
+  .posts {
+    flex-direction: column;
+  }
+
+  .single-post {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .single-post::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

@@ -6,7 +6,7 @@
       <div class="single-post" *ngFor="let article of articles; let i= index;">
         <div class="trend-rate">0{{ i + 1 }}</div>
         <div class="post-credit">
-          <h3>{{ article?.title }}</h3>
+          <h3><a [href]="article?.url" target="_blank">{{ article?.title }}</a></h3>
           <span><a>{{ article?.author|| 'Unknown Author' }}</a> in <a>{{ article.source.name }}</a></span>
           <span>{{ article?.publishedAt | date: 'MMM d' }} • 3 min read
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
